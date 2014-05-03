@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+${1:@plural}.each_with_index do |${2:single}, i|
+
+	$0
+
+end
+]]></content>
+	<tabTrigger>eachi</tabTrigger>
+	<scope>source.ruby</scope>
+	<description>Ruby each_with_index</description>
+</snippet>

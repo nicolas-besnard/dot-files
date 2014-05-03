@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Rails.logger.info '  -- ${1:var}'
+]]></content>
+	<tabTrigger>rlis</tabTrigger>
+	<scope>source.ruby.rails</scope>
+    <description>logger.info.short</description>
+</snippet>
