@@ -47,12 +47,11 @@
 
 		if @${1/[A-Z]/\L$0/}.changed?
 
-			if @question.save
+			if @${1/[A-Z]/\L$0/}.save
 
 				flash[:success] = "${1:User} was successfully updated"
 
-				flash[:error] = "Something went wrong"
-
+				redirect_to ${1/[A-Z]/\L$0/}s_path
 
 			else
 
@@ -66,7 +65,7 @@
 
 			flash[:info] = 'Nothing change'
 
-			redirect_to @${1/[A-Z]/\L$0/}s_url
+			redirect_to ${1/[A-Z]/\L$0/}s_path
 
 		end
 
