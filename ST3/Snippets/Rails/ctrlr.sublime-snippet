@@ -77,7 +77,7 @@
 
 			flash[:success] = "${1:User} was successfully deleted"
 
-			redirect_to @${1/[A-Z]/\L$0/}s_path
+			redirect_to ${1/[A-Z]/\L$0/}s_path
 
 		else
 

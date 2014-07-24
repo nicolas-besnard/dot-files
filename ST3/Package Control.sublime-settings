@@ -3,10 +3,16 @@
 	[
 		"Alignment",
 		"ApplySyntax",
+		"ASCII Comment Snippets",
+		"BeautifyRuby",
 		"Git",
-		"SimpleClone",
+		"LiveReload",
+		"RSpec",
+		"RubyTest",
+		"Sass",
 		"Solarized Color Scheme",
 		"SublimeCodeIntel",
+		"SublimeLinter",
 		"Theme - Flatland",
 		"Theme - Sodarized"
 	]
