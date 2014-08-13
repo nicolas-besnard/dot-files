@@ -1,6 +1,7 @@
-wget https://s3-us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_2013-12-12.tar.gz
+wget http://dynamodb-local.s3-website-us-west-2.amazonaws.com/dynamodb_local_latest -O dynamodb.tar.gz
 
-tar -xvf dynamodb_local_2013-12-12.tar.gz
-rm dynamodb_local_2013-12-12.tar.gz
+mkdir dynamodb
+tar -xvf dynamodb.tar.gz -C dynamodb/
+rm dynamodb.tar.gz
 
-mv dynamodb_local_2013-12-12 /Applications/dynamodb
+mv dynamodb /Applications/
