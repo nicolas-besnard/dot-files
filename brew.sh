@@ -6,3 +6,9 @@ brew cask install google-chrome
 brew cask install skype
 brew cask install iterm2
 brew cask install vlc
+brew cask install alfred
+brew cask install appcode
+brew cask install webstorm
+brew cask install rubymine
+brew cask alfred link
+brew cask cleanup
