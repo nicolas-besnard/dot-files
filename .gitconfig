@@ -14,5 +14,8 @@
 	remotes = remote -v
 	p = push
 	tags = tag -l
+	undo-last-commit = reset --soft HEAD~1
 [push]
 	default = simple
+[url "https://"]
+	insteadOf = git://
