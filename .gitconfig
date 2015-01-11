@@ -15,6 +15,7 @@
 	p = push
 	tags = tag -l
 	undo-last-commit = reset --soft HEAD~1
+	refresh-branch = remote update origin --prune
 [push]
 	default = simple
 [url "https://"]
