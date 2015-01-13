@@ -1,4 +1,3 @@
-brew install python
 pip install awscli
 pit install boto
 wget https://s3.amazonaws.com/elasticbeanstalk/cli/AWS-ElasticBeanstalk-CLI-2.6.3.zip

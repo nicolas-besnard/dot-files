@@ -3,16 +3,16 @@ mkdir ~/Desktop/Screenshots
 defaults write com.apple.screencapture location ~/Desktop/Screenshots
 
 echo "Setup computer name"
-sudo scutil --set ComputerName "cappie-macbook"
-sudo scutil --set HostName "cappie-macbook"
-sudo scutil --set LocalHostName "cappie-macbook"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "cappie-macbook"
+sudo scutil --set ComputerName "nicolas-macbook"
+sudo scutil --set HostName "nicolas-macbook"
+sudo scutil --set LocalHostName "nicolas-macbook"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "nicolas-macbook"
 
 echo "Disable the 'Are you sure you want to open this application?' dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 #echo "Disable Notification Center and remove the menu bar icon"
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 echo "Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
