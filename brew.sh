@@ -17,6 +17,7 @@ brew cask install virtualbox
 brew install python
 brew install emacs --use-git-head --cocoa --srgb
 brew install cask
+brew install docker
 brew cask alfred link
 brew cask install bettertouchtool
 brew cask cleanup
