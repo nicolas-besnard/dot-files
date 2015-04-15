@@ -14,6 +14,7 @@ brew cask install webstorm
 brew cask install rubymine
 brew cask install sublime-text3
 brew cask install virtualbox
+brew install docker
 brew install python
 brew install emacs --use-git-head --cocoa --srgb
 brew install cask
