@@ -7,6 +7,7 @@ brew cask install google-chrome
 brew cask install firefox
 brew cask install skype
 brew cask install iterm2
+brew cask install smcfancontrol
 brew cask install vlc
 brew cask install alfred
 brew cask install appcode
