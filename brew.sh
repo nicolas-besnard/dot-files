@@ -16,10 +16,11 @@ brew cask install rubymine
 brew cask install sublime-text3
 brew cask install virtualbox
 brew install docker
+brew install docker-compose
+brew install git-extras
 brew install python
 brew install emacs --use-git-head --with-cocoa --srgb
 brew install cask
-brew install docker
 brew cask alfred link
 brew cask install bettertouchtool
 brew cask cleanup
