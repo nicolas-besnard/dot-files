@@ -50,7 +50,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rails ruby github node npm brew)
+plugins=(git osx rails ruby github node npm brew zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,12 +62,8 @@ export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='emacs'
-else
-    export EDITOR='emacs'
-fi
+export EDITOR='emacs'
+
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -80,13 +76,42 @@ alias cp="cp -v"
 alias rm="rm -v"
 alias l="ls -l"
 
+
 alias ddb="cd /Applications/dynamodb && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar"
 alias elastic="cd /Applications/elasticsearch/bin/ && ./elasticsearch"
 alias dev="cd ~/Documents/development"
 alias clean="find . \( -name '*~' -o -name '#*#' -o -name '.DS_Store' -o -name '*.log' \) -delete -exec echo "Removed" {} \;"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias playme-api-mysql="mysql -uroot -proot playme_development"
-alias playme-back-mysql="mysql -uroot -proot quiz_back_development"
+alias subl="/opt/homebrew-cask/Caskroom/sublime-text3/Build\ 3083/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias postgres="postgres -D /usr/local/var/postgres"
+alias ios_simulator="open -n /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
+
+alias r="rails"
+
+alias g="git"
+alias gs="g s"
+alias gd="g diff"
+alias gco="g commit"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source ~/.bin/z/z.sh
+
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/Nicolas/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
+# added by travis gem
+[ -f /Users/Nicolas/.travis/travis.sh ] && source /Users/Nicolas/.travis/travis.sh
+
+# Load zsh-syntax-highlighting.
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Load zsh-autosuggestions.
+source ~/.zsh/zsh-autosuggestions/autosuggestions.zsh
+
+# Enable autosuggestions automatically.
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
+
+AUTOSUGGESTION_ACCEPT_RIGHT_ARROW=1
