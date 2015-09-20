@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-RPROMPT='[%{$fg_bold[red]%}%*%{$reset_color%}]'
+
 ZSH_THEME="robbyrussell"
 
 # Example aliases
@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/.bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -76,13 +76,8 @@ alias cp="cp -v"
 alias rm="rm -v"
 alias l="ls -l"
 
-
-alias ddb="cd /Applications/dynamodb && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar"
-alias elastic="cd /Applications/elasticsearch/bin/ && ./elasticsearch"
-alias dev="cd ~/Documents/development"
 alias clean="find . \( -name '*~' -o -name '#*#' -o -name '.DS_Store' -o -name '*.log' \) -delete -exec echo "Removed" {} \;"
 alias subl="/opt/homebrew-cask/Caskroom/sublime-text3/Build\ 3083/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias postgres="postgres -D /usr/local/var/postgres"
 alias ios_simulator="open -n /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
 
 alias r="rails"
@@ -92,12 +87,9 @@ alias gs="g s"
 alias gd="g diff"
 alias gco="g commit"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source ~/.bin/z/z.sh
-
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/Nicolas/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export GOPATH=$HOME/golang
 
 # added by travis gem
 [ -f /Users/Nicolas/.travis/travis.sh ] && source /Users/Nicolas/.travis/travis.sh
@@ -115,3 +107,5 @@ zle-line-init() {
 zle -N zle-line-init
 
 AUTOSUGGESTION_ACCEPT_RIGHT_ARROW=1
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
