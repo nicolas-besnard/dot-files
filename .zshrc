@@ -6,7 +6,6 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-
 ZSH_THEME="robbyrussell"
 
 # Example aliases
@@ -50,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rails ruby github node npm brew zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git osx rails ruby github node npm brew zsh-syntax-highlighting zsh-autosuggestions git-extras httpie jsontools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,8 +61,12 @@ export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/.bin"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-export EDITOR='emacs'
-
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='emacs'
+else
+    export EDITOR='emacs'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -76,23 +79,15 @@ alias cp="cp -v"
 alias rm="rm -v"
 alias l="ls -l"
 
+alias ddb="cd /Applications/dynamodb && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar"
+alias elastic="cd /Applications/elasticsearch/bin/ && ./elasticsearch"
+alias dev="cd ~/Documents/development"
 alias clean="find . \( -name '*~' -o -name '#*#' -o -name '.DS_Store' -o -name '*.log' \) -delete -exec echo "Removed" {} \;"
-alias subl="/opt/homebrew-cask/Caskroom/sublime-text3/Build\ 3083/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias ios_simulator="open -n /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias t="~/todo-txt/todo.sh"
 
-alias r="rails"
-
-alias g="git"
-alias gs="g s"
-alias gd="g diff"
-alias gco="g commit"
-
+PATH=$PATH:$HOME/.rvm/bin:$HOME/gocode/bin # Add RVM to PATH for scripting
 source ~/.bin/z/z.sh
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export GOPATH=$HOME/golang
-
-# added by travis gem
-[ -f /Users/Nicolas/.travis/travis.sh ] && source /Users/Nicolas/.travis/travis.sh
 
 # Load zsh-syntax-highlighting.
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -105,7 +100,7 @@ zle-line-init() {
     zle autosuggest-start
 }
 zle -N zle-line-init
-
 AUTOSUGGESTION_ACCEPT_RIGHT_ARROW=1
 
-test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+source ~/todo-txt/todo_completion
+export GOPATH="$HOME/gocode/"
