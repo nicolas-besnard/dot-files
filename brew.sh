@@ -20,6 +20,8 @@ brew install docker-compose
 brew install git-extras
 brew install python
 brew install emacs --use-git-head --with-cocoa --srgb
+brew install tmux
+brew install tmuxinator
 brew install cask
 brew cask alfred link
 brew cask install bettertouchtool
