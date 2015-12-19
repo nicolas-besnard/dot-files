@@ -15,6 +15,7 @@ brew cask install rubymine
 brew cask install sublime-text3
 brew cask install virtualbox
 brew cask install dockertoolbox
+brew cask install appcleaner
 brew install git-extras
 brew install python
 brew install emacs --use-git-head --with-cocoa --srgb
