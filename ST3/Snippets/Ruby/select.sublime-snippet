@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[select { |${1:e}| ${2}}]]></content>
-	<tabTrigger>select</tabTrigger>
-	<scope>source.ruby</scope>
-    <description>select</description>
-</snippet>

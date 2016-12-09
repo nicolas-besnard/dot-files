@@ -9,7 +9,6 @@ brew cask install smcfancontrol
 brew cask install vlc
 brew cask install alfred
 brew cask install rubymine
-brew cask install sublime-text3
 brew cask install appcleaner
 brew install git-extras
 brew install python

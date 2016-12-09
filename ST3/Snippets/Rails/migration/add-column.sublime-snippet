@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[add_column :${1:table}, :${2:column}, :${3:string}]]></content>
-    <tabTrigger>add_col</tabTrigger>
-    <scope>meta.rails.migration - meta.rails.migration.create_table - meta.rails.migration.change_table</scope>
-    <description>Add Column</description>
-</snippet>
