@@ -10,6 +10,8 @@ brew cask install vlc
 brew cask install alfred
 brew cask install rubymine
 brew cask install appcleaner
+brew cask install spotify
+brew cask install charles
 brew install git-extras
 brew install python
 brew install tmux
