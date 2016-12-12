@@ -12,9 +12,13 @@ brew cask install rubymine
 brew cask install appcleaner
 brew cask install spotify
 brew cask install charles
+brew cask install keepingyouawake
 brew install git-extras
 brew install python
 brew install tmux
 brew install reattach-to-user-namespace
+brew install node
 brew cask alfred link
 brew cask cleanup
+
+npm install -g diff-so-fancy
