@@ -20,5 +20,3 @@ brew install reattach-to-user-namespace
 brew install node
 brew cask alfred link
 brew cask cleanup
-
-npm install -g diff-so-fancy
