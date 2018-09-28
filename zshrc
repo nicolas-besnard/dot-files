@@ -87,7 +87,7 @@ export EDITOR='vim'
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -97,20 +97,6 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cenpil-react='docker run --rm --name cenpil-front --volume $(pwd):/app -it --publish 4000:3000 --network="cenpil-back_default" cenpil-front:latest yarn start-js'
-alias cenpil-sass='docker run --rm --name cenpil-front-sass --volume $(pwd):/app -it cenpil-front:latest yarn watch-css'
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-if [ -e /usr/local/opt/fzf/shell/completion.zsh ]; then
-  source /usr/local/opt/fzf/shell/key-bindings.zsh
-  source /usr/local/opt/fzf/shell/completion.zsh
-  export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
-  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-  export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
-  # export FZF_DEFAULT_OPTS='
-  # --color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
-  # --color info:108,prompt:109,spinner:108,pointer:168,marker:168
-  # '
-fi
 
 source ~/.zsh/init.zsh
