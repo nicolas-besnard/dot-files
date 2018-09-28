@@ -13,6 +13,8 @@ brew cask install appcleaner
 brew cask install spotify
 brew cask install charles
 brew cask install keepingyouawake
+brew install fzf
+brew install the_silver_searcher
 brew install git-extras
 brew install python
 brew install tmux

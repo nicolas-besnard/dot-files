@@ -2,11 +2,12 @@ echo "Default Screenshot location"
 mkdir ~/Desktop/Screenshots
 defaults write com.apple.screencapture location ~/Desktop/Screenshots
 
-echo "Setup computer name"
-sudo scutil --set ComputerName "nicolas-macbook"
-sudo scutil --set HostName "nicolas-macbook"
-sudo scutil --set LocalHostName "nicolas-macbook"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "nicolas-macbook"
+echo "Setup computer name. Type a name:"
+read computername
+sudo scutil --set ComputerName $computername
+sudo scutil --set HostName $computername
+sudo scutil --set LocalHostName $computername
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $computername
 
 echo "Disable the 'Are you sure you want to open this application?' dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -100,7 +101,6 @@ defaults write com.apple.dock mru-spaces -bool false
 echo "Sort Activity Monitor results by CPU usage"
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
-
 
 echo "Kill affected applications, so the changes apply"
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
