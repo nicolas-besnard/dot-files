@@ -100,3 +100,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/.zsh/init.zsh
+eval "$(rbenv init -)"
+
+# Remove duplicate in history
+export HISTCONTROL=ignoreboth:erasedups
