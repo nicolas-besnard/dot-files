@@ -1,10 +1,12 @@
-ln -s zshrc ~/.zshrc
-ln -s "$(pwd)/zsh" ~/.zsh
+ln -sf "$(pwd)/zshrc" ~/.zshrc
+ln -sf "$(pwd)/zsh" ~/.zsh
 
-ln -s tmux.conf ~/.tmux.conf
-ln -s "$(pwd)/tmux" ~/.tmux
+ln -sf "$(pwd)/tmux.conf" ~/.tmux.conf
+ln -sf "$(pwd)/tmux" ~/.tmux
 sh tmux.sh
 
-ln -s gitconfig ~/.gitconfig
-ln -s gitignore_global ~/.gitignore_global
-ln -s gitmessage ~/.gitmessage
+ln -sf "$(pwd)/gitconfig" ~/.gitconfig
+ln -sf "$(pwd)/gitignore_global" ~/.gitignore_global
+ln -sf "$(pwd)/gitmessage" ~/.gitmessage
+
+ln -sf "$(pwd)/gemrc"/ ~/.gemrc

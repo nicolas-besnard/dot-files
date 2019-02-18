@@ -31,7 +31,7 @@
   trustExitCode = true
 [commit]
   template = ~/.gitmessage
-	verbose = true
+  verbose = true
 [fetch]
   prune = true
 [rebase]
