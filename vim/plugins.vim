@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'altercation/vim-colors-solarized'
