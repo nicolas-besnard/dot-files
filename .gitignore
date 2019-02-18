@@ -2,3 +2,4 @@
 .tmux/plugins
 zsh/zsh-autosuggestions
 *.swp
+vim/plugged
