@@ -103,5 +103,9 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/init.zsh
 eval "$(rbenv init -)"
 
+export NVM_DIR="$HOME/.nvm"
+. "$NVM_DIR/nvm.sh"
+
 # Remove duplicate in history
 export HISTCONTROL=ignoreboth:erasedups
+. ~/.bin/z/z.sh

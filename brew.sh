@@ -17,5 +17,6 @@ brew install git-extras
 brew install python
 brew install tmux
 brew install reattach-to-user-namespace
+brew install exa
 brew cask alfred link
 brew cask cleanup
