@@ -1,4 +1,4 @@
-export VISUAL=vim 
+export VISUAL=vim
 export EDITOR=$VISUAL
 
 if [[ -n $SSH_CONNECTION ]]; then
