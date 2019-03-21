@@ -1,0 +1,3 @@
+DOTFILES_DIRS=$HOME/dot-files
+EXCLUDES="rcrc *.sh README.md RubyMine.jar INSTALL_DIRECTORY"
+TAGS="zsh tmux git vim"
