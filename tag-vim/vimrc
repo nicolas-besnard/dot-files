@@ -7,10 +7,8 @@ let test#strategy = "dispatch"
 
 let g:airline_theme='nord'
 set tabstop=2 shiftwidth=2 expandtab
-
-" FOLD {{{
 set commentstring=\ \ #%s   " When folds are created, add them to this
-set fillchars=vert:\ ,stl:\ ,stlnc:\ ,fold:-,diff:┄
+" set fillchars=vert:\ ,stl:\ ,stlnc:\ ,fold:-,diff:┄
 " Unicode chars for diffs/folds, and rely on
 " Colors for window borders
 silent! set foldmethod=marker " Use braces by default
@@ -21,9 +19,6 @@ highlight link Folded Ignore
 " Use the space key to toggle folds
 nnoremap <space> za
 vnoremap <space> zf
-
-" }}}
-
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
@@ -80,7 +75,7 @@ set shiftround
 set expandtab
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+" set list listchars=tab:»·,trail:·,nbsp:·
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
