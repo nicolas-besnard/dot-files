@@ -1,6 +1,3 @@
 .DS_Store
-.tmux/plugins
-zsh/zsh-autosuggestions
 *.swp
-vim/plugged
-tmux/plugins/
+tag-tmux/tmux/plugins/tpm
