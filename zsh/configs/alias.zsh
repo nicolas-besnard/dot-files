@@ -8,3 +8,4 @@ alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
 alias gdc='git difff --cached | less -r'
 alias gd='git difff | less -r'
 alias rr=routes
+alias be='bundle exec'

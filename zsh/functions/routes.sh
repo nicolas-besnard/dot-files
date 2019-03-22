@@ -20,7 +20,7 @@ routes() {
     fi
   else
     if type fzf >/dev/null; then
-      fzf $CACHE_FILE
+      cat $CACHE_FILE | fzf
     else
       cat $CACHE_FILE
     fi

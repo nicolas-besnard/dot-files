@@ -3,3 +3,4 @@
 zsh/zsh-autosuggestions
 *.swp
 vim/plugged
+tmux/plugins/
