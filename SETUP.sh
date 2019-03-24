@@ -21,7 +21,7 @@ brew bundle --file=- <<EOF
 	tap "caskroom/cask"
 
   cask "firefox"
-  cask "iterm"
+  cask "iterm2"
   cask "vlc"
   cask "alfred"
   cask "rubymine"
@@ -32,7 +32,6 @@ brew bundle --file=- <<EOF
 
 	# Unix
 	brew "universal-ctags", args: ["HEAD"]
-	brew "git"
 	brew "openssl"
 	brew "rcm"
 	brew "reattach-to-user-namespace"
@@ -41,7 +40,7 @@ brew bundle --file=- <<EOF
 	brew "vim"
 	brew "watchman"
 	brew "zsh"
-  brew "fzf
+  brew "fzf"
   brew "git-extras"
   brew "exa" # better ls
 
@@ -59,7 +58,7 @@ brew bundle --file=- <<EOF
 	# Programming language prerequisites and package managers
 	brew "libyaml" # should come after openssl
 	brew "coreutils"
-	sdf plugin-addbrew "yarn"
+	brew "yarn"
 	cask "gpg-suite"
 
 	# Databases
@@ -71,8 +70,9 @@ fancy_echo "## ASDF"
 
 if [ ! -d "$HOME/.asdf" ]; then
 	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.0
-  source "$HOME/.asdf/asdf.sh"
 fi
+
+source "$HOME/.asdf/asdf.sh"
 
 add_or_update_asdf_plugin() {
   local name="$1"
