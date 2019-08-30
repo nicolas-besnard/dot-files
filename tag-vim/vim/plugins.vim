@@ -11,7 +11,6 @@ Plug 'tacahiroy/ctrlp-funky'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'janko-m/vim-test'
-Plug 'kchmck/vim-coffee-script'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'scrooloose/syntastic'
 Plug 'slim-template/vim-slim'
@@ -27,9 +26,5 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
-Plug 'Shougo/neocomplete.vim'
-      \ | Plug 'Shougo/neco-vim'       " Vim source for neocomplete/deoplete
-      \ | Plug 'Shougo/neco-syntax'    " Syntax source for neocomplete/deoplete
-      \ | Plug 'Shougo/neoinclude.vim' " Include completion framework for neocomplete/deoplete`
 
 call plug#end()

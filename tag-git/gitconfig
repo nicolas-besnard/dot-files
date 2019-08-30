@@ -1,6 +1,6 @@
 [user]
-  name = Nicolas Besnard
-  email = besnard.nicolas@gmail.com
+	name = Nicolas Besnard
+	email = besnard.nicolas@gmail.com
 [core]
   editor = vim
   pager = diff-so-fancy | less --tabs=1,5 -RFX
@@ -8,6 +8,7 @@
 [color]
   ui = true
 [alias]
+  pf = push --force-with-lease
   b = branch -a
   co = checkout
   s = status -sb
@@ -24,8 +25,8 @@
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
 [log]
   decorate = full
-[pull]
-  ff = only
+# [pull]
+#   ff = only
 [color "diff"]
   meta = yellow
   frag = magenta bold
@@ -52,3 +53,8 @@
   autosquash = true
 [push]
   default = current
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

@@ -1,8 +1,9 @@
 routes() {
-  CACHE_FILE='tmp/routes'
+  CACHE_FILE=tmp/routes
 
   # regenerate tmp/routes if it is not already generated or it is older than the routes config file
-  if [[ ! -f $CACHE_FILE ]] || [[ CACHE_FILE -ot config/routes.rb ]]; then
+  if [ $CACHE_FILE -ot config/routes.rb ] || [ ! -e $CACHE_FILE ]; then
+    echo 'generating new cache...'
     ROUTES="$(bundle exec rake routes)"
 
     if [[ $? -ne 0 ]]; then

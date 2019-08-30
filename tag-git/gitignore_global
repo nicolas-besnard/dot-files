@@ -5,6 +5,8 @@ vendor/bundle
 *.sw[nop]
 .bundle
 .env
+.env.local
+.env.*.local
 db/*.sqlite3
 log/*.log
 rerun.txt

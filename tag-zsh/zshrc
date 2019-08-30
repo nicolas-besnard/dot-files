@@ -58,10 +58,10 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/.zsh/init.zsh
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
-# export NVM_DIR="$HOME/.nvm"
-# . "$NVM_DIR/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+. "$NVM_DIR/nvm.sh"
 
 . ~/.bin/z/z.sh
 
@@ -70,6 +70,8 @@ for function in ~/.zshrc.*; do
   source $function
 done
 
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
+#
+# . $HOME/.asdf/completions/asdf.bash
 
-. $HOME/.asdf/completions/asdf.bash
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/Users/nicolasbesnard/.cargo/bin:$PATH"
