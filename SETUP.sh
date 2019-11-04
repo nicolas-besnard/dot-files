@@ -43,6 +43,7 @@ brew bundle --file=- <<EOF
   brew "fzf"
   brew "git-extras"
   brew "exa" # better ls
+  brew "diff-so-fancy" # better git diff
 
 	# Heroku
 	tap "heroku/brew"
@@ -59,7 +60,7 @@ brew bundle --file=- <<EOF
 	brew "libyaml" # should come after openssl
 	brew "coreutils"
 	brew "yarn"
-	cask "gpg-suite"
+	# cask "gpg-suite"
 
 	# Databases
 	# brew "postgres", restart_service: :changed
