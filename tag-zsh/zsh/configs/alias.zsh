@@ -1,4 +1,4 @@
-alias ls="exa"
+alias ls="exa --group-directories-first"
 alias mv="mv -v"
 alias cp="cp -v"
 alias rm="rm -v"

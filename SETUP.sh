@@ -120,6 +120,9 @@ fancy_echo "Installing latest Node ..."
 bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
 install_asdf_language "nodejs"
 
+defaults write com.apple.screencapture location ~/Desktop/screenshots
+killall SystemUIServer
+
 RCRC=rcrc rcup -v
 
 # echo "##     ZSH"
