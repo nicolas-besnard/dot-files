@@ -44,6 +44,7 @@ brew bundle --file=- <<EOF
   brew "git-extras"
   brew "exa" # better ls
   brew "diff-so-fancy" # better git diff
+  brew "zplug"
 
 	# Heroku
 	tap "heroku/brew"
