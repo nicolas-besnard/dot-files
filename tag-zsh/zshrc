@@ -62,6 +62,9 @@ eval "$(rbenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
 . "$NVM_DIR/nvm.sh"
+alias dc="docker-compose"
+alias tm_disable_fast_backup="sudo sysctl debug.lowpri_throttle_enabled=1"
+alias tm_enable_fast_backup="sudo sysctl debug.lowpri_throttle_enabled=0"
 
 # . ~/.bin/z/z.sh
 
