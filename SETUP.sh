@@ -15,6 +15,13 @@ fi
 
 brew update --force
 brew bundle --file=- <<EOF
+
+  cask_args appdir: "/Applications"
+  tap "homebrew/bundle"
+  tap "homebrew/cask"
+  tap "homebrew/cask-drivers"
+  tap "homebrew/cask-fonts"
+  tap "homebrew/core"
 	tap "thoughtbot/formulae"
 	tap "homebrew/services"
 	tap "universal-ctags/universal-ctags"
@@ -29,8 +36,10 @@ brew bundle --file=- <<EOF
   cask "spotify"
   cask "charles"
   cask "keepingyouawake"
+  cask "wkhtmltopdf"
 
 	# Unix
+  brew "httpie"
 	brew "universal-ctags", args: ["HEAD"]
 	brew "openssl"
 	brew "rcm"
