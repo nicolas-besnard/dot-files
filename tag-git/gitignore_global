@@ -5,6 +5,7 @@ vendor/bundle
 *.sw[nop]
 .bundle
 .env
+.env.*
 .env.local
 .env.*.local
 db/*.sqlite3
@@ -15,3 +16,4 @@ tags
 tmp/**/*
 !tmp/cache/.keep
 *.pyc
+.tool-versions

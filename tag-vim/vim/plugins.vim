@@ -26,5 +26,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()

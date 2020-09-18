@@ -74,10 +74,11 @@ for function in ~/.zshrc.*; do
 done
 
 # . $HOME/.asdf/asdf.sh
-#
+
 # . $HOME/.asdf/completions/asdf.bash
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/Users/nicolasbesnard/.cargo/bin:$PATH"
+# export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
@@ -91,4 +92,38 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 
+alias git-pull-all="find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull"
+
 source /usr/local/opt/zplug/repos/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export FASTLANE_ITC_TEAM_NAME="Nicolas BESNARD"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/mc mc
+
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+zsh_terraform() {
+  [[ "$PWD" == ~ ]] && return
+  # break if there is no .terraform directory
+  if [[ -d .terraform ]]; then
+    local tf_workspace=$(/usr/local/bin/terraform workspace show)
+		echo -n "%{$fg_bold[blue]%}terraform:(%{$fg[red]%}${tf_workspace})%{$reset_color%} "
+  fi
+}
+function tf_prompt_info() {
+    # dont show 'default' workspace in home dir
+    # [[ "$PWD" == ~ ]] && return
+    # check if in terraform dir
+    if [ -d .terraform ]; then
+      workspace=$(terraform workspace show 2> /dev/null) || return
+      echo "[${workspace}]"
+else
+echo "NOP"
+    fi
+}
+PROMPT="$PROMPT$(zsh_terraform)"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true

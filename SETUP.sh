@@ -15,18 +15,19 @@ fi
 
 brew update --force
 brew bundle --file=- <<EOF
-
-  cask_args appdir: "/Applications"
-  tap "homebrew/bundle"
+  tap 'github/gh'
+  tap 'heroku/brew'
+  tap "thoughtbot/formulae"
   tap "homebrew/cask"
-  tap "homebrew/cask-drivers"
   tap "homebrew/cask-fonts"
-  tap "homebrew/core"
-	tap "thoughtbot/formulae"
-	tap "homebrew/services"
-	tap "universal-ctags/universal-ctags"
-	tap "caskroom/cask"
+  tap "homebrew/cask-versions"
+  tap "homebrew/services"
+  tap "universal-ctags/universal-ctags"
 
+  cask "1password"
+  cask "1password-cli"
+  cask "docker"
+  cask "font-jetbrains-mono"
   cask "firefox"
   cask "iterm2"
   cask "vlc"
@@ -50,13 +51,15 @@ brew bundle --file=- <<EOF
 	brew "watchman"
 	brew "zsh"
   brew "fzf"
+  brew "git-lfs"
   brew "git-extras"
   brew "exa" # better ls
   brew "diff-so-fancy" # better git diff
   brew "zplug"
+  brew "htop"
+  brew "terraform"
 
 	# Heroku
-	tap "heroku/brew"
 	# brew "heroku/brew/heroku"
 	# brew "parity"
 
